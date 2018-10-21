@@ -10,6 +10,8 @@ import sg.dominic.featuresimpl.NonSwimable;
 
 public  class Animal {
 	
+
+	
 	SingingPattern singingPattern;
 	
 	FlyingPattern flyingPattern;
@@ -34,6 +36,10 @@ public  class Animal {
 
 	public void walk(){
 		System.out.println("i am walking");
+	}
+	
+	public String sex(){
+		return "Female";
 	}
 	
 	

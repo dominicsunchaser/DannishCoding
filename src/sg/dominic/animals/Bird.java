@@ -5,6 +5,8 @@ import sg.dominic.featuresimpl.Flyable;
 
 public class Bird extends Animal {
 	
+
+	
 	public void fly(){
 		if(this.flyingPattern.fly())
 		System.out.println("I am flying");

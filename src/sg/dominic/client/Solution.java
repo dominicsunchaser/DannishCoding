@@ -12,7 +12,11 @@ import sg.dominic.animals.Duck;
 import sg.dominic.animals.Parrot;
 import sg.dominic.animals.Rooster;
 import sg.dominic.featues.MakeSound;
+import sg.dominic.featuresimpl.Flyable;
+import sg.dominic.featuresimpl.NonFlyable;
+import sg.dominic.featuresimpl.NonWalkable;
 import sg.dominic.featuresimpl.ParrotLivingWithAdaptor;
+import sg.dominic.featuresimpl.Walkable;
 
 public class Solution {
 
@@ -42,6 +46,13 @@ public class Solution {
 		parrot.sound();
 		parrot.setLivingWithAdaptor(withRooster);
 		parrot.sound();
+		
+		Animal catapillar = new Animal();
+		catapillar.setFlyingPattern(new NonFlyable());
+		catapillar.setWalkabePattern(new Walkable());
+		
+		catapillar.setFlyingPattern(new Flyable());
+		catapillar.setWalkabePattern(new NonWalkable());
 		
 		
 		

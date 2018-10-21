@@ -5,17 +5,23 @@ import java.util.Arrays;
 
 import sg.dominic.animals.Animal;
 import sg.dominic.animals.Bird;
+import sg.dominic.animals.ButterFly;
+import sg.dominic.animals.CLownFish;
 import sg.dominic.animals.Cat;
 import sg.dominic.animals.Chicken;
 import sg.dominic.animals.Dog;
+import sg.dominic.animals.Dolhpin;
 import sg.dominic.animals.Duck;
+import sg.dominic.animals.Fish;
 import sg.dominic.animals.Parrot;
 import sg.dominic.animals.Rooster;
+import sg.dominic.animals.Shark;
 import sg.dominic.featues.MakeSound;
 import sg.dominic.featuresimpl.Flyable;
 import sg.dominic.featuresimpl.NonFlyable;
 import sg.dominic.featuresimpl.NonWalkable;
 import sg.dominic.featuresimpl.ParrotLivingWithAdaptor;
+import sg.dominic.featuresimpl.RoosterPhonics;
 import sg.dominic.featuresimpl.Walkable;
 
 public class Solution {
@@ -53,6 +59,35 @@ public class Solution {
 		
 		catapillar.setFlyingPattern(new Flyable());
 		catapillar.setWalkabePattern(new NonWalkable());
+		
+		Animal[] animals = new Animal[]{
+				new Bird(),
+				new Duck(),
+				new Chicken(),
+				new Rooster(),
+				new Parrot(),
+				new Fish(),
+				new Shark(),
+				new CLownFish(),
+				new Dolhpin(),
+				new Dog(),
+				new ButterFly(),
+				new Cat()
+				};
+		
+		long fly_cnt  = Arrays.stream(animals).filter(x -> x.flyingPattern.fly()).count();
+		
+		long walk_cnt  = Arrays.stream(animals).filter(x -> x.walkabePattern.isWalkable()).count();
+		
+		long sing_cnt  = Arrays.stream(animals).filter(x -> x.singingPattern.sing()).count();
+		
+		long swim_cnt  = Arrays.stream(animals).filter(x -> x.swimingPattern.swim()).count();
+		
+		Rooster roosterObj  = (Rooster)rooster;
+		roosterObj.setPhonics(new RoosterPhonics());
+		roosterObj.sound();
+		
+		
 		
 		
 		

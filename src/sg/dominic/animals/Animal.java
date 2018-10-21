@@ -12,13 +12,15 @@ import sg.dominic.featuresimpl.Walkable;
 
 public  class Animal {
 	
-	FlyingPattern flyingPattern;
+	public String secondLanguage;
 	
-	SwimPattern swimingPattern;
+	public FlyingPattern flyingPattern;
 	
-	SingingPattern singingPattern;
+	public SwimPattern swimingPattern;
 	
-	WalkablePattern walkabePattern;
+	public SingingPattern singingPattern;
+	
+	public WalkablePattern walkabePattern;
 	
 	public void setWalkabePattern(WalkablePattern walkabePattern) {
 		this.walkabePattern = walkabePattern;
